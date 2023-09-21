@@ -18,6 +18,7 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());      //실제 Proxy가 주입되는지 콘솔에 출력해서 확인하기
     }
 
     @GetMapping("/members/new")
